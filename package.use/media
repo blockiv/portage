@@ -1,0 +1,9 @@
+dev-python/PyQt5 declarative sql webchannel
+dev-qt/qtwebchannel qml
+dev-qt/qtwebengine widgets
+media-libs/libsdl2 gles2
+media-video/ffmpeg opus
+media-video/mpv vapoursynth
+sys-libs/zlib minizip
+media-sound/playerctl introspection
+media-sound/ncmpcpp clock outputs taglib visualizer

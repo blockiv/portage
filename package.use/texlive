@@ -1,0 +1,2 @@
+app-text/texlive -xml science extra graphics
+app-text/texlive-core xetex

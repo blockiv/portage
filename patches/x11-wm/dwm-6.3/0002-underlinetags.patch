@@ -1,0 +1,46 @@
+From 9cef70d33549d8087b366f0c0068004f481a5be7 Mon Sep 17 00:00:00 2001
+From: blockiv <blockiv@tuta.io>
+Date: Sun, 19 Feb 2023 23:04:31 -0500
+Subject: [PATCH 02/17] Apply underlinetags patch
+
+---
+ config.def.h | 9 +++++++--
+ dwm.c        | 2 ++
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index b8755e8..aa60e39 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -19,8 +19,13 @@ static const char *colors[][3]      = {
+ };
+ 
+ /* tagging */
+-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+-static const char *alttags[] = { "<01>", "<02>", "<03>", "<04>", "<05>" };
++static const char *tags[] = { "cmd", "www", "crypto", "vm", "dev", "chat", "media" };
++static const char *alttags[] = { "[cmd]", "[www]", "[crypto]", "[vm]", "[dev]", "[chat]", "[media]" };
++
++static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
++static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
++static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
++static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
+ 
+ static const Rule rules[] = {
+ 	/* xprop(1):
+diff --git a/dwm.c b/dwm.c
+index 61c40cf..a23a982 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -728,6 +728,8 @@ drawbar(Monitor *m)
+ 		w = TEXTW(tagtext);
+  		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
+ 		drw_text(drw, x, 0, w, bh, lrpad / 2, tagtext, urg & 1 << i);
++		if (ulineall || m->tagset[m->seltags] & 1 << i) /* if there are conflicts, just move these lines directly underneath both 'drw_setscheme' and 'drw_text' :) */
++			drw_rect(drw, x + ulinepad, bh - ulinestroke - ulinevoffset, w - (ulinepad * 2), ulinestroke, 1, 0);
+ 		x += w;
+ 	}
+ 	w = blw = TEXTW(m->ltsymbol);
+-- 
+2.39.2
+

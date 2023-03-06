@@ -1,0 +1,3 @@
+app-admin/doas persist
+app-admin/pass dmenu
+app-portage/pfl -network-cron

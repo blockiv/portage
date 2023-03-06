@@ -1,0 +1,3 @@
+x11-misc/dmenu savedconfig -xinerama
+x11-misc/slstatus savedconfig
+x11-wm/dwm savedconfig -xinerama

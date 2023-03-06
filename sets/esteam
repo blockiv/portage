@@ -1,0 +1,28 @@
+# ELDEN RING
+>=sys-devel/gcc-4.6.0
+>=sys-libs/glibc-2.15
+
+# Counter-Strike Global Offensive
+app-arch/bzip2[abi_x86_64]
+dev-libs/expat[abi_x86_64]
+media-libs/fontconfig:1.0[abi_x86_32]
+media-libs/fontconfig:1.0[abi_x86_64]
+media-libs/freetype:2[abi_x86_32]
+media-libs/freetype:2[abi_x86_64]
+media-libs/libpng-compat:1.2[abi_x86_64]
+media-libs/openal[abi_x86_32]
+media-libs/openal[abi_x86_64]
+net-libs/libcurl-debian:4[abi_x86_64]
+sys-apps/util-linux[abi_x86_32]
+sys-apps/util-linux[abi_x86_64]
+>=sys-devel/gcc-4.6.0
+>=sys-devel/gcc-4.6.0[cxx]
+>=sys-devel/gcc-4.6.0[multilib,cxx]
+>=sys-libs/glibc-2.15
+>=sys-libs/glibc-2.15[stack-realign(+),multilib]
+sys-libs/zlib[abi_x86_64]
+x11-libs/libX11[abi_x86_64]
+
+# Proton EasyAntiCheat Runtime
+>=sys-libs/glibc-2.15
+>=sys-libs/glibc-2.15[stack-realign(+),multilib]

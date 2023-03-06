@@ -1,0 +1,9 @@
+media-fonts/corefonts MSttfEULA
+media-fonts/kochi-substitute free-noncomm
+sys-kernel/linux-firmware linux-fw-redistributable no-source-code
+media-tv/plex-media-server Plex
+media-sound/spotify Spotify
+games-misc/an-anime-game-launcher-bin BSD-2-Clause BSD-3-Clause
+# move net-im/discord-bin net-im/discord
+net-im/discord all-rights-reserved
+games-util/steam-launcher ValveSteamLicense

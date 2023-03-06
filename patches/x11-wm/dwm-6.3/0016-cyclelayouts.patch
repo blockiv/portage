@@ -1,0 +1,93 @@
+From a47ac61eb00c4d9c0e283faf30c983aacb27f927 Mon Sep 17 00:00:00 2001
+From: blockiv <blockiv@tuta.io>
+Date: Mon, 20 Feb 2023 00:00:02 -0500
+Subject: [PATCH 16/17] Apply cyclelayouts patch
+
+---
+ config.def.h |  8 +++++---
+ dwm.1        |  6 ++++++
+ dwm.c        | 18 ++++++++++++++++++
+ 3 files changed, 29 insertions(+), 3 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index d89b84a..fd1fc62 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -139,6 +139,8 @@ static Key keys[] = {
+ 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
+ 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[2]} },
+ 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[3]} },
++	{ MODKEY|ControlMask,           XK_comma,  cyclelayout,    {.i = -1 } },
++	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
+ 	{ MODKEY,                       XK_space,  setlayout,      {0} },
+ 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+ 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
+@@ -148,9 +150,9 @@ static Key keys[] = {
+ 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+ 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+ 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+-	{ MODKEY,            			XK_y,  	   togglescratch,  {.ui = 0 } },
+-	{ MODKEY,            			XK_u,	   togglescratch,  {.ui = 1 } },
+-	{ MODKEY,            			XK_x,	   togglescratch,  {.ui = 2 } },
++	{ MODKEY,                       XK_y,      togglescratch,  {.ui = 0 } },
++	{ MODKEY,                       XK_u,      togglescratch,  {.ui = 1 } },
++	{ MODKEY,                       XK_x,      togglescratch,  {.ui = 2 } },
+ 	TAGKEYS(                        XK_1,                      0)
+ 	TAGKEYS(                        XK_2,                      1)
+ 	TAGKEYS(                        XK_3,                      2)
+diff --git a/dwm.1 b/dwm.1
+index 3d310ac..31b23ec 100644
+--- a/dwm.1
++++ b/dwm.1
+@@ -92,6 +92,12 @@ Sets monocle layout.
+ .B Mod1\-space
+ Toggles between current and previous layout.
+ .TP
++.B Mod1\-Control\-,
++Cycles backwards in layout list.
++.TP
++.B Mod1\-Control\-.
++Cycles forwards in layout list.
++.TP
+ .B Mod1\-j
+ Focus next window.
+ .TP
+diff --git a/dwm.c b/dwm.c
+index b626fef..beff903 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -177,6 +177,7 @@ static void configure(Client *c);
+ static void configurenotify(XEvent *e);
+ static void configurerequest(XEvent *e);
+ static Monitor *createmon(void);
++static void cyclelayout(const Arg *arg);
+ static void destroynotify(XEvent *e);
+ static void detach(Client *c);
+ static void detachstack(Client *c);
+@@ -763,6 +764,23 @@ createmon(void)
+ 	return m;
+ }
+ 
++void
++cyclelayout(const Arg *arg) {
++	Layout *l;
++	for(l = (Layout *)layouts; l != selmon->lt[selmon->sellt]; l++);
++	if(arg->i > 0) {
++		if(l->symbol && (l + 1)->symbol)
++			setlayout(&((Arg) { .v = (l + 1) }));
++		else
++			setlayout(&((Arg) { .v = layouts }));
++	} else {
++		if(l != layouts && (l - 1)->symbol)
++			setlayout(&((Arg) { .v = (l - 1) }));
++		else
++			setlayout(&((Arg) { .v = &layouts[LENGTH(layouts) - 2] }));
++	}
++}
++
+ void
+ destroynotify(XEvent *e)
+ {
+-- 
+2.39.2
+

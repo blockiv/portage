@@ -1,0 +1,6 @@
+FEATURES="ccache"
+CCACHE_DIR="/var/cache/ccache"
+
+RUSTC_WRAPPER=/usr/bin/sccache
+SCCACHE_DIR=/var/cache/sccache
+SCCACHE_MAX_FRAME_LENGTH=104857600
