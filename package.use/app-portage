@@ -1,0 +1,2 @@
+app-portage/portage-bashrc-mv -ccache -remove-la
+app-portage/eix optimization strong-optimization

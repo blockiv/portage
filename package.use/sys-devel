@@ -1,0 +1,7 @@
+sys-devel/clang-runtime sanitize
+sys-devel/lld zstd
+sys-devel/llvm binutils-plugin zstd
+sys-devel/gettext git
+sys-devel/binutils zstd
+sys-devel/gcc default-stack-clash-protection -fortran graphite hardened lto pgo zstd
+sys-devel/gdb zstd

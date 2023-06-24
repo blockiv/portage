@@ -1,0 +1,2 @@
+media-sound/lame -frontend
+media-sound/mpg pulseaudio

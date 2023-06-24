@@ -1,0 +1,3 @@
+www-client/firefox dbus geckodriver hardened hwaccel -pgo pulseaudio screencast system-png -telemetry
+www-client/librewolf dbus -geckodriver hwaccel -pgo pulseaudio screencast system-png
+www-client/qutebrowser pdf

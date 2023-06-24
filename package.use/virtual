@@ -1,0 +1,2 @@
+virtual/imagemagick-tools jpeg tiff svg png # FEATURES=test
+virtual/rust rustfmt

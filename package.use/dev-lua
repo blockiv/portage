@@ -1,0 +1,2 @@
+dev-lua/* -lua_single_target_lua5-1 lua_single_target_luajit
+dev-lua/* -lua_targets_lua5-1 lua_targets_luajit

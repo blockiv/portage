@@ -1,0 +1,3 @@
+# Enable removed C++17 features
+dev-cpp/clucene CXXFLAGS+=-D_LIBCPP_ENABLE_CXX17_REMOVED_FEATURES # https://bugs.gentoo.org/869170
+app-office/libreoffice CXXFLAGS+=-D_LIBCPP_ENABLE_CXX17_REMOVED_FEATURES

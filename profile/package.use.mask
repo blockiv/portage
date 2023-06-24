@@ -1,0 +1,6 @@
+# Bug: https://bugs.gentoo.org/908961
+app-editors/vim-core nls
+
+# Unmask pgo on musl
+# Bug 829033
+www-client/firefox -pgo

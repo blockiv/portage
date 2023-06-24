@@ -1,0 +1,18 @@
+media-libs/freetype X
+media-libs/harfbuzz icu
+media-libs/libcaca X imlib opengl truetype
+media-libs/libcanberra X alsa -gtk3 pulseaudio udev
+media-libs/libglvnd X
+media-libs/libpng apng
+media-libs/libpulse X dbus
+media-libs/libsndfile minimal
+media-libs/libva X
+media-libs/libvpx postproc
+media-libs/libwebp gif opengl
+media-libs/mesa -gles2 lm-sensors opencl vaapi vdpau vulkan vulkan-overlay zink
+media-libs/openal pipewire
+media-libs/tiff zstd
+media-libs/vulkan-layers X
+media-libs/vulkan-loader X layers
+media-libs/x264 opencl pic
+media-libs/x265 pic

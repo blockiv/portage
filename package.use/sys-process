@@ -1,0 +1,3 @@
+sys-process/procps elogind modern-top
+sys-process/psmisc X
+sys-process/htop hwloc lm-sensors

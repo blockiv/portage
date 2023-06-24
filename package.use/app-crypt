@@ -1,0 +1,3 @@
+app-crypt/gnupg -smartcard
+app-crypt/pinentry X gtk
+app-crypt/gcr gtk # pinentry[gtk]

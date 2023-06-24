@@ -1,0 +1,8 @@
+sys-apps/util-linux caps -cramfs -logger udev
+sys-apps/groff X
+sys-apps/hwloc X cairo svg udev
+sys-apps/kmod zstd
+sys-apps/file zstd
+sys-apps/flatpak X introspection policykit
+sys-apps/xdg-desktop-portal screencast
+sys-apps/dbus X elogind

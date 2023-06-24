@@ -1,0 +1,5 @@
+# Packages to disable LTO
+
+# https://github.com/llvm/llvm-project/issues/63110
+sys-devel/clang +flto*
+sys-devel/llvm +flto*

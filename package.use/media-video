@@ -1,0 +1,4 @@
+media-video/ffmpeg X chromium fdk kvazaar libaom libass libcaca libdrm openal opencl opengl openssl pic rav1e truetype vaapi vdpau volkan webp x264 x265
+media-video/pipewire X dbus echo-cancel extra ffmpeg flatpak pipewire-alsa sound-server
+media-video/wireplumber elogind
+media-video/mpv openal opengl pipewire pulseaudio vaapi vdpau vulkan -lua_single_target_lua5-1 lua_single_target_luajit
