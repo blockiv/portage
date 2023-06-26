@@ -1,2 +1,3 @@
 net-libs/gnutls zstd
 net-libs/nodejs lto
+net-libs/libpcap dbus

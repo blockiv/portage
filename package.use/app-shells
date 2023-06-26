@@ -1,1 +1,2 @@
 app-shells/bash pgo
+app-shells/schily-tools SCHILYTOOLS: -* cdrtools RENAMESCHILY: -*

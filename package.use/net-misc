@@ -2,3 +2,4 @@ net-misc/curl -ftp -imap -pop3 -progress-meter -smtp -tftp zstd
 net-misc/dhcpcd -embedded
 net-misc/iputils tracepath
 net-misc/rsync zstd
+net-misc/spice-gtk policykit usbredir

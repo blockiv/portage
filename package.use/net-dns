@@ -1,0 +1,3 @@
+# required by app-emulation/libvirt-9.4.0-r3::gentoo[virt-network]
+# required by dev-python/libvirt-python-9.4.0::gentoo
+net-dns/dnsmasq ipv6 script
