@@ -1,3 +1,4 @@
 dev-lang/python lto pgo
+dev-lang/ruby -rdoc
 dev-lang/rust clippy doc lto rust-src rustfmt system-llvm
 dev-lang/rust-bin rustfmt

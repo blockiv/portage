@@ -3,3 +3,4 @@ dev-libs/libxml2 -ftp
 dev-libs/libsodium minimal
 dev-libs/glib dbus
 dev-libs/xmlsec nss
+dev-libs/libgudev introspection

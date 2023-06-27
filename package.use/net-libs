@@ -1,3 +1,4 @@
 net-libs/gnutls zstd
 net-libs/nodejs lto
 net-libs/libpcap dbus
+net-libs/webkit-gtk X gamepad -gstreamer
