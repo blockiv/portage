@@ -1,2 +1,3 @@
 media-sound/lame -frontend
 media-sound/mpg pulseaudio
+media-sound/spotify libnotify pulseaudio # TODO: try USE="-pulseaudio"
