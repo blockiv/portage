@@ -1,2 +1,3 @@
 app-admin/doas persist
 app-admin/pass X dmenu
+app-admin/sysklogd logger logrotate
