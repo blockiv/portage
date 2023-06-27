@@ -1,0 +1,2 @@
+sys-kernel/gentoo-kernel "LLVM=1"
+sys-fs/zfs-kmod "LLVM=1"
